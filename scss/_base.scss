@@ -1,0 +1,273 @@
+@import "mixins";
+@import "variables";
+
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $FontFamilyGeneral;
+  font-weight: $FontWeightRegular;
+  font-size: $FontSize;
+}
+
+.container {
+  max-width: 1440px;
+  min-width: 100%;
+  padding: 0 2rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+}
+
+.btn {
+  @include button($AccentBlue, $White);
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+a {
+  color: $White;
+  text-decoration: none;
+}
+
+.header-title {
+  font-family: $FontFamily;
+  font-weight: $FontWeightBold;
+}
+
+// * === NAVIGATION === *
+
+nav {
+  background: $PrimaryDarkBlueMain;
+}
+
+// * === HEADER === *
+
+header {
+  background: $PrimaryDarkBlueMain;
+}
+
+.header-banner {
+  grid-gap: 2rem 1rem;
+  padding: 0rem 2rem 7rem 2rem;
+
+  &__content {
+    text-align: center;
+    justify-items: center;
+    color: white;
+    padding-bottom: 1rem;
+  }
+
+  &--header {
+    font-size: 1.6em;
+    line-height: 1.6;
+    letter-spacing: 1.4px;
+  }
+
+  &--text {
+    font-size: 1em;
+    line-height: 1.6;
+    word-spacing: 1px;
+    padding: 1.3rem 1rem;
+  }
+
+  &--button {
+    padding-top: 1.3rem;
+  }
+}
+
+// * === MAIN - BEGINNING === *
+
+main {
+  background: $PrimaryDarkBlueMain;
+}
+
+// * === FIRST-SECTION: FEATURES === *
+
+.features {
+  grid-gap: 5rem 1rem;
+  padding: 1rem 2rem;
+  color: $White;
+
+  .feature {
+    display: inherit;
+    grid-gap: 1.6rem 1rem;
+
+    &--image {
+      width: 20%;
+      justify-self: center;
+    }
+
+    &--content {
+      text-align: center;
+
+      h3 {
+        font-size: 1.2em;
+        padding-bottom: 1rem;
+        letter-spacing: 1.4px;
+      }
+
+      p {
+        font-size: 1em;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// * === SECOND-SECTION: STAY-PRODUCTIVE === *
+
+.stay-productive {
+  color: $White;
+  grid-gap: 4rem 1rem;
+  padding: 10rem 2rem 1rem;
+
+  &__content {
+    h3 {
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      padding: 0 0 1rem 3px;
+    }
+
+    & > p {
+      line-height: 1.7;
+      font-size: 0.9em;
+      letter-spacing: 0.5px;
+
+      &:nth-child(2) {
+        padding: 0 3px 1rem 0;
+      }
+
+      &:nth-child(3) {
+        padding: 0 5px 1rem 0;
+      }
+    }
+
+    & > div {
+      border-bottom: 1px solid $AccentCyan;
+      width: 9.7rem;
+      padding-bottom: 3px;
+
+      a {
+        align-items: center;
+        color: $AccentCyan;
+
+        p {
+          font-size: 0.9em;
+          margin-right: 0.3rem;
+        }
+
+        & > div {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+
+// * === THIRD-SECTION: TESTIMONIALS === *
+
+.testimonials {
+  padding: 10rem 3em 5rem;
+  grid-gap: 3rem 1rem;
+
+  &__card {
+    color: $White;
+    padding: 2rem 1.5em;
+    background: $PrimaryDarkBlueTestimonial;
+    box-shadow: 0 5px 5px 0 hsl(220, 26%, 16%);
+    border-radius: 5px;
+
+    &-content {
+      font-size: 0.75em;
+      line-height: 1.7;
+    }
+  }
+
+  &__details {
+    margin-top: 1.8rem;
+    align-items: center;
+
+    &-img {
+      width: 10%;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &-content {
+      padding-left: 1em;
+
+      .heading {
+        font-size: 0.9em;
+        letter-spacing: 1px;
+        padding-bottom: 2px;
+      }
+
+      .description {
+        font-size: 0.7em;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+// * === LAST-SECTION: EARLY-ACCESS === *
+
+.early-access {
+  padding: 1rem 2rem;
+
+  &__card {
+    border-radius: 9px;
+    color: white;
+    padding: 3rem 1rem;
+    background: $PrimaryDarkBlueEmail;
+    box-shadow: 0px 5px 5px 0px hsl(216, 31%, 10%);
+
+    .heading {
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      text-align: center;
+      padding-bottom: 1.5rem;
+    }
+
+    .text {
+      text-align: center;
+      line-height: 1.7;
+      font-size: 1em;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      & > div {
+        input {
+          width: 100%;
+          height: 3rem;
+          border-radius: 50px;
+          border: none;
+          outline: none;
+          margin-bottom: 1.5rem;
+          padding-left: 18px;
+          font-size: 0.8rem;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// * === MAIN - END === *

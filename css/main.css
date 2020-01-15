@@ -1,0 +1,232 @@
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1440px;
+  min-width: 100%;
+  padding: 0 2rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+}
+
+.btn {
+  background-color: #339ecc;
+  cursor: pointer;
+  padding: 15px 4rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  display: inline-block;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+nav {
+  background: #181f2a;
+}
+
+header {
+  background: #181f2a;
+}
+
+.header-banner {
+  grid-gap: 2rem 1rem;
+  padding: 0rem 2rem 7rem 2rem;
+}
+.header-banner__content {
+  text-align: center;
+  justify-items: center;
+  color: white;
+  padding-bottom: 1rem;
+}
+.header-banner--header {
+  font-size: 1.6em;
+  line-height: 1.6;
+  letter-spacing: 1.4px;
+}
+.header-banner--text {
+  font-size: 1em;
+  line-height: 1.6;
+  word-spacing: 1px;
+  padding: 1.3rem 1rem;
+}
+.header-banner--button {
+  padding-top: 1.3rem;
+}
+
+main {
+  background: #181f2a;
+}
+
+.features {
+  grid-gap: 5rem 1rem;
+  padding: 1rem 2rem;
+  color: white;
+}
+.features .feature {
+  display: inherit;
+  grid-gap: 1.6rem 1rem;
+}
+.features .feature--image {
+  width: 20%;
+  justify-self: center;
+}
+.features .feature--content {
+  text-align: center;
+}
+.features .feature--content h3 {
+  font-size: 1.2em;
+  padding-bottom: 1rem;
+  letter-spacing: 1.4px;
+}
+.features .feature--content p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.stay-productive {
+  color: white;
+  grid-gap: 4rem 1rem;
+  padding: 10rem 2rem 1rem;
+}
+.stay-productive__content h3 {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  padding: 0 0 1rem 3px;
+}
+.stay-productive__content > p {
+  line-height: 1.7;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
+.stay-productive__content > p:nth-child(2) {
+  padding: 0 3px 1rem 0;
+}
+.stay-productive__content > p:nth-child(3) {
+  padding: 0 5px 1rem 0;
+}
+.stay-productive__content > div {
+  border-bottom: 1px solid #65e2d9;
+  width: 9.7rem;
+  padding-bottom: 3px;
+}
+.stay-productive__content > div a {
+  align-items: center;
+  color: #65e2d9;
+}
+.stay-productive__content > div a p {
+  font-size: 0.9em;
+  margin-right: 0.3rem;
+}
+.stay-productive__content > div a > div {
+  margin-top: 4px;
+}
+
+.testimonials {
+  padding: 10rem 3em 5rem;
+  grid-gap: 3rem 1rem;
+}
+.testimonials__card {
+  color: white;
+  padding: 2rem 1.5em;
+  background: #202a3c;
+  box-shadow: 0 5px 5px 0 #1e2533;
+  border-radius: 5px;
+}
+.testimonials__card-content {
+  font-size: 0.75em;
+  line-height: 1.7;
+}
+.testimonials__details {
+  margin-top: 1.8rem;
+  align-items: center;
+}
+.testimonials__details-img {
+  width: 10%;
+}
+.testimonials__details-img img {
+  border-radius: 50%;
+}
+.testimonials__details-content {
+  padding-left: 1em;
+}
+.testimonials__details-content .heading {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  padding-bottom: 2px;
+}
+.testimonials__details-content .description {
+  font-size: 0.7em;
+  letter-spacing: 1px;
+}
+
+.early-access {
+  padding: 1rem 2rem;
+}
+.early-access__card {
+  border-radius: 9px;
+  color: white;
+  padding: 3rem 1rem;
+  background: #1c2431;
+  box-shadow: 0px 5px 5px 0px #121821;
+}
+.early-access__card .heading {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.early-access__card .text {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 1em;
+  margin-bottom: 2rem;
+}
+.early-access__card form > div input {
+  width: 100%;
+  height: 3rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  margin-bottom: 1.5rem;
+  padding-left: 18px;
+  font-size: 0.8rem;
+}
+.early-access__card form > div button {
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */
