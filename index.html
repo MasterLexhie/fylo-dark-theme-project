@@ -12,47 +12,57 @@
     <title>Fylo - home</title>
   </head>
   <body>
-    <!-- <nav>
-      <div class="container">
-        <div class="logo">
-          <img src="assets/images/logo.svg" alt="fylo-logo" />
+    <nav>
+      <div class="navigation container flex">
+        <div class="navigation__logo">
+          <img src="assets/icons/logo.svg" alt="fylo-logo" />
         </div>
-        <div class="navigation">
-          <ul class="navigation__menu">
+        <div class="navigation__menu">
+          <ul class="flex">
             <li><a href="#">Features</a></li>
             <li><a href="#">Team</a></li>
             <li><a href="#">Sign In</a></li>
           </ul>
         </div>
       </div>
-    </nav> -->
-    <!-- <header>
-      <div class="container header-banner grid">
-        <div class="header-banner__image">
-          <img src="assets/images/illustration-intro.png" alt="hero-intro" />
+    </nav>
+    <header>
+      <div class="header">
+        <div class="curvy-bg">
+          <img
+            src="assets/images/bg-curvy-mobile.svg"
+            alt="curvy-background"
+            srcset="assets/images/bg-curvy-desktop.svg"
+            sizes="(min-width:900px)"
+          />
         </div>
-        <div class="header-banner__content grid">
-          <h3 class="header-banner--header header-title">
-            All your files in one secure location accessible anywhere.
-          </h3>
-          <p class="header-banner--text">
-            Fylo stores all your most important files in one secure location.
-            Access them wherever you need, share and collaborate with friends
-            family, and co-workers.
-          </p>
-          <div class="header-banner--button">
-            <button class="btn">Get Started</button>
+        <div class="container header-banner grid">
+          <div class="header-banner__image">
+            <img src="assets/images/illustration-intro.png" alt="hero-intro" />
+          </div>
+          <div class="header-banner__content grid">
+            <h3 class="header-banner--header header-title">
+              All your files in one secure location, accessible anywhere.
+            </h3>
+            <p class="header-banner--text">
+              Fylo stores all your most important files in one secure location.
+              Access them wherever you need, share and collaborate with friends
+              family, and co-workers.
+            </p>
+            <div class="header-banner--button">
+              <button class="btn">Get Started</button>
+            </div>
           </div>
         </div>
       </div>
-    </header> -->
-    <!-- <main>
+    </header>
+    <main>
       <section>
         <div class="container features grid">
           <div class="feature">
             <div class="feature--image">
               <img
-                src="assets/images/icon-access-anywhere.svg"
+                src="assets/icons/icon-access-anywhere.svg"
                 alt="icon-access-anywhere"
               />
             </div>
@@ -66,7 +76,7 @@
           </div>
           <div class="feature">
             <div class="feature--image">
-              <img src="assets/images/icon-security.svg" alt="icon-security" />
+              <img src="assets/icons/icon-security.svg" alt="icon-security" />
             </div>
             <div class="feature--content">
               <h3 class="header-title">Security you can trust</h3>
@@ -80,7 +90,7 @@
           <div class="feature">
             <div class="feature--image">
               <img
-                src="assets/images/icon-collaboration.svg"
+                src="assets/icons/icon-collaboration.svg"
                 alt="icon-collaboration"
               />
             </div>
@@ -95,7 +105,7 @@
           </div>
           <div class="feature">
             <div class="feature--image">
-              <img src="assets/images/icon-any-file.svg" alt="icon-any-file" />
+              <img src="assets/icons/icon-any-file.svg" alt="icon-any-file" />
             </div>
             <div class="feature--content">
               <h3 class="header-title">Store any type of file</h3>
@@ -132,7 +142,7 @@
                   See how Fylo works
                 </p>
                 <div>
-                  <img src="assets/images/icon-arrow.svg" alt="icon-arrow" />
+                  <img src="assets/icons/icon-arrow.svg" alt="icon-arrow" />
                 </div>
               </a>
             </div>
@@ -140,6 +150,9 @@
         </div>
       </section>
       <section>
+        <div class="quotes">
+          <img src="assets/images/bg-quotes.png" alt="quotes-image" />
+        </div>
         <div class="container testimonials grid">
           <div class="testimonials__card">
             <p class="testimonials__card-content">
@@ -223,56 +236,98 @@
           </div>
         </div>
       </section>
-    </main> -->
+    </main>
     <footer>
-      <div class="footer-logo">
-        <img src="assets/images/logo.svg" alt="logo" />
+      <div class="container flex">
+        <div class="base-footer__logo">
+          <img src="assets/icons/logo.svg" alt="logo" />
+        </div>
       </div>
-      <div class="footer-grid">
-        <div class="footer-grid__description">
-          <div class="location">
+      <div class="base-footer grid container">
+        <div class="base-footer__description">
+          <div class="location flex">
             <div class="location__image">
-              <img src="assets/images/icon-location.svg" alt="pin-logo" />
+              <img src="assets/icons/icon-location.svg" alt="pin-logo" />
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
               quibusdam iusto, unde ad id provident error velit. Commodi
-              repellat nulla .
+              repellat nulla.
             </p>
           </div>
-          <div class="telephone">
+          <div class="telephone flex">
             <div class="telephone__image">
-              <img src="assets/icons/call-logo.svg" alt="call-logo" />
+              <img src="assets/icons/icon-phone.svg" alt="call-logo" />
             </div>
             <p>
               +1-543-123-4567
             </p>
           </div>
-          <div class="email">
+          <div class="email flex">
             <div class="email__image">
-              <img src="assets/icons/mail-logo.svg" alt="mail-logo" />
+              <img src="assets/icons/icon-email.svg" alt="mail-logo" />
             </div>
             <p>
               example@fylo.com
             </p>
           </div>
         </div>
-        <div class="footer-grid__first-menu">
-          <ul>
-            <li>About Us</li>
-            <li>Jobs</li>
-            <li>Press</li>
-            <li>Blog</li>
-          </ul>
+        <div class="base-footer-menu grid">
+          <div class="base-footer__first-menu">
+            <ul>
+              <li>
+                <a href="#">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Jobs
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Press
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="base-footer__second-menu">
+            <ul>
+              <li>
+                <a href="#">
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Term
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Privacy
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-grid__second-menu">
-          <ul>
-            <li>Contact Us</li>
-            <li>Term</li>
-            <li>Privacy</li>
-          </ul>
+        <div class="base-footer__social-icons flex">
+          <div>
+            <img src="assets/icons/facebook-logo.svg" alt="facebook-logo" />
+          </div>
+          <div>
+            <img src="assets/icons/logo-twitter.svg" alt="logo-twitter" />
+          </div>
+          <div>
+            <img src="assets/icons/logo-instagram.svg" alt="logo-instagram" />
+          </div>
         </div>
-        <div class="footer-grid__social-icons"></div>
       </div>
     </footer>
   </body>

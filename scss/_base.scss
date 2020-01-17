@@ -9,6 +9,7 @@ body,
   font-family: $FontFamilyGeneral;
   font-weight: $FontWeightRegular;
   font-size: $FontSize;
+  // background: $PrimaryDarkBlueTestimonial;
 }
 
 .container {
@@ -48,30 +49,129 @@ a {
 // * === NAVIGATION === *
 
 nav {
-  background: $PrimaryDarkBlueMain;
+  background: $PrimaryDarkBlueTestimonial;
+  padding: 2rem 0rem;
+}
+
+.navigation {
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    width: 120px;
+  }
+
+  &__menu {
+    @media screen and (min-width: 960px) {
+      flex-basis: 28%;
+    }
+
+    & > ul {
+      list-style-type: none;
+
+      @media screen and (min-width: 960px) {
+        justify-content: space-between;
+        margin-right: 4rem;
+      }
+
+      li {
+        margin-right: 1rem;
+        &:last-child {
+          margin-right: unset;
+        }
+
+        a {
+          font-size: 0.8em;
+
+          @media screen and (min-width: 960px) {
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
 }
 
 // * === HEADER === *
 
 header {
-  background: $PrimaryDarkBlueMain;
+  background: $PrimaryDarkBlueTestimonial;
+}
+.curvy-bg {
+  position: absolute;
+  bottom: 25rem;
+
+  @media screen and (min-width: 950px) {
+    bottom: -6px;
+  }
+}
+
+.header {
+  position: relative;
+  &::after {
+    content: "";
+    bottom: 0;
+    background-color: $PrimaryDarkBlueMain;
+    position: absolute;
+    width: 100%;
+    height: calc(100% / 2);
+
+    @media screen and (min-width: 480px) {
+      height: calc(93% / 2);
+    }
+    @media screen and (min-width: 580px) {
+      height: calc(85% / 2);
+    }
+    @media screen and (min-width: 600px) {
+      height: calc(83% / 2);
+    }
+    @media screen and (min-width: 607px) {
+      height: calc(87% / 2);
+    }
+    @media screen and (min-width: 760px) {
+      height: calc(78% / 2);
+    }
+    @media screen and (min-width: 950px) {
+      display: none;
+    }
+  }
 }
 
 .header-banner {
   grid-gap: 2rem 1rem;
-  padding: 0rem 2rem 7rem 2rem;
+  padding: 4rem 2rem 7rem 2rem;
+
+  &__image {
+    position: relative;
+    justify-self: center;
+
+    @media screen and (min-width: 760px) {
+      top: -29px;
+    }
+
+    @media screen and (min-width: 950px) {
+      width: 58%;
+    }
+  }
 
   &__content {
     text-align: center;
     justify-items: center;
     color: white;
     padding-bottom: 1rem;
+    position: relative;
+    z-index: 1;
   }
 
   &--header {
     font-size: 1.6em;
     line-height: 1.6;
     letter-spacing: 1.4px;
+
+    @media screen and (min-width: 950px) {
+      font-size: 2rem;
+      padding: 0 15rem;
+    }
   }
 
   &--text {
@@ -79,6 +179,11 @@ header {
     line-height: 1.6;
     word-spacing: 1px;
     padding: 1.3rem 1rem;
+
+    @media screen and (min-width: 950px) {
+      font-size: 1.4em;
+      padding: 1.3rem 24rem;
+    }
   }
 
   &--button {
@@ -90,6 +195,16 @@ header {
 
 main {
   background: $PrimaryDarkBlueMain;
+
+  section {
+    &:nth-child(3) {
+      padding-bottom: 17rem;
+    }
+
+    &:last-child {
+      position: relative;
+    }
+  }
 }
 
 // * === FIRST-SECTION: FEATURES === *
@@ -99,17 +214,31 @@ main {
   padding: 1rem 2rem;
   color: $White;
 
+  @media screen and (min-width: 950px) {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  }
+
   .feature {
     display: inherit;
     grid-gap: 1.6rem 1rem;
 
     &--image {
-      width: 20%;
+      width: 96px;
+      height: 90px;
       justify-self: center;
+
+      img {
+        height: 100%;
+      }
     }
 
     &--content {
       text-align: center;
+      // padding: 0rem 6rem;
+
+      @media screen and (min-width: 1120px) {
+        padding: 0rem 12rem;
+      }
 
       h3 {
         font-size: 1.2em;
@@ -132,17 +261,47 @@ main {
   grid-gap: 4rem 1rem;
   padding: 10rem 2rem 1rem;
 
+  @media screen and (min-width: 950px) {
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    align-items: center;
+  }
+
+  // @media screen and (min-width: 1200px) {
+  //   left: 11%;
+  //   top: 162px;
+  // }
+
+  &__image {
+    max-width: 350px;
+    @media screen and (min-width: 375px) {
+      justify-self: center;
+    }
+
+    @media screen and (min-width: 950px) {
+      max-width: unset;
+    }
+  }
+
   &__content {
     h3 {
       font-size: 1.2em;
       letter-spacing: 1px;
       padding: 0 0 1rem 3px;
+
+      @media screen and (min-width: 950px) {
+        font-size: 3em;
+        padding: 0 9rem 1rem 0px;
+      }
     }
 
     & > p {
       line-height: 1.7;
       font-size: 0.9em;
       letter-spacing: 0.5px;
+
+      @media screen and (min-width: 950px) {
+        font-size: 1.2em;
+      }
 
       &:nth-child(2) {
         padding: 0 3px 1rem 0;
@@ -158,6 +317,10 @@ main {
       width: 9.7rem;
       padding-bottom: 3px;
 
+      @media screen and (min-width: 950px) {
+        width: 12.7rem;
+      }
+
       a {
         align-items: center;
         color: $AccentCyan;
@@ -165,6 +328,10 @@ main {
         p {
           font-size: 0.9em;
           margin-right: 0.3rem;
+
+          @media screen and (min-width: 950px) {
+            font-size: 1.2em;
+          }
         }
 
         & > div {
@@ -177,9 +344,39 @@ main {
 
 // * === THIRD-SECTION: TESTIMONIALS === *
 
+.quotes {
+  position: relative;
+  width: 6%;
+  top: 144px;
+  left: 46px;
+
+  @media screen and (min-width: 950px) {
+    left: 100px;
+    top: 154px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    left: 11%;
+    top: 162px;
+  }
+}
+
 .testimonials {
   padding: 10rem 3em 5rem;
-  grid-gap: 3rem 1rem;
+  grid-gap: 3rem 2rem;
+
+  @media screen and (min-width: 720px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  @media screen and (min-width: 950px) {
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    padding: 10rem 8rem 5rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 10rem 12rem 5rem;
+  }
 
   &__card {
     color: $White;
@@ -188,8 +385,12 @@ main {
     box-shadow: 0 5px 5px 0 hsl(220, 26%, 16%);
     border-radius: 5px;
 
+    @media screen and (min-width: 950px) {
+      position: relative;
+    }
+
     &-content {
-      font-size: 0.75em;
+      font-size: 0.9em;
       line-height: 1.7;
     }
   }
@@ -199,7 +400,7 @@ main {
     align-items: center;
 
     &-img {
-      width: 10%;
+      width: 40px;
 
       img {
         border-radius: 50%;
@@ -227,6 +428,8 @@ main {
 
 .early-access {
   padding: 1rem 2rem;
+  position: absolute;
+  top: -197px;
 
   &__card {
     border-radius: 9px;
@@ -235,11 +438,26 @@ main {
     background: $PrimaryDarkBlueEmail;
     box-shadow: 0px 5px 5px 0px hsl(216, 31%, 10%);
 
+    @media screen and (min-width: 480px) {
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 760px) {
+      max-width: 58rem;
+      padding: 5rem 1rem;
+    }
+
     .heading {
       font-size: 1.2em;
       letter-spacing: 1px;
       text-align: center;
       padding-bottom: 1.5rem;
+
+      @media screen and (min-width: 760px) {
+        font-size: 2rem;
+      }
     }
 
     .text {
@@ -247,23 +465,46 @@ main {
       line-height: 1.7;
       font-size: 1em;
       margin-bottom: 2rem;
+
+      @media screen and (min-width: 760px) {
+        padding: 0 4rem;
+      }
     }
 
     form {
       & > div {
+        @media screen and (min-width: 760px) {
+          padding: 0 4rem;
+          justify-content: space-between;
+        }
+
+        ::placeholder {
+          color: #bfbfbf;
+        }
+
         input {
           width: 100%;
-          height: 3rem;
+          height: 3.7rem;
           border-radius: 50px;
           border: none;
           outline: none;
           margin-bottom: 1.5rem;
           padding-left: 18px;
-          font-size: 0.8rem;
+          font-size: 0.9rem;
+
+          @media screen and (min-width: 760px) {
+            flex-basis: 66%;
+            margin-bottom: unset;
+          }
         }
 
         button {
-          width: 100%;
+          padding: 15px 0rem;
+          font-size: 1em;
+
+          @media screen and (min-width: 760px) {
+            flex-basis: 32%;
+          }
         }
       }
     }
@@ -273,3 +514,139 @@ main {
 // * === MAIN - END === *
 
 // * === FOOTER === *
+
+footer {
+  background: $PrimaryDarkBlueFooter;
+  padding-top: 20rem;
+
+  > * {
+    color: $White;
+  }
+}
+
+.base-footer {
+  grid-gap: 2rem 1rem;
+  padding-bottom: 2rem;
+
+  @media screen and (min-width: 760px) {
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  }
+
+  &__logo {
+    padding: 0 0 3rem 0rem;
+  }
+
+  &__description {
+    padding-bottom: 3rem;
+    display: inherit;
+
+    @media screen and (min-width: 760px) {
+      grid-column: 1/3;
+    }
+
+    .location,
+    .telephone,
+    .email {
+      padding-bottom: 2rem;
+
+      @media screen and (min-width: 760px) {
+        padding-bottom: unset;
+      }
+    }
+
+    .location,
+    .telephone,
+    .email {
+      &__image {
+        margin-right: 1rem;
+      }
+    }
+
+    .location {
+      @media screen and (min-width: 760px) {
+        grid-row: 1/3;
+      }
+
+      &__image {
+        padding-top: 0.5rem;
+      }
+
+      p {
+        flex-basis: 87%;
+        line-height: 1.8;
+        font-size: 1em;
+      }
+    }
+
+    .telephone,
+    .email {
+      @media screen and (min-width: 760px) {
+        grid-column: 2/3;
+      }
+
+      &__image {
+        @media screen and (min-width: 760px) {
+          padding-top: 0.5rem;
+        }
+      }
+
+      p {
+        font-size: 0.96em;
+      }
+    }
+  }
+
+  &-menu {
+    @media screen and (min-width: 760px) {
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+      justify-items: end;
+    }
+  }
+
+  &__first-menu,
+  &__second-menu {
+    padding-bottom: 1rem;
+    & > ul {
+      list-style-type: none;
+
+      li {
+        margin-bottom: 1rem;
+        letter-spacing: 0.5px;
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  &__social-icons {
+    justify-content: center;
+
+    @media screen and (min-width: 760px) {
+      grid-column: 1/-1;
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-column: unset;
+    }
+
+    & > div {
+      width: 35px;
+      height: 35px;
+      border: 1px solid white;
+      margin-left: 1rem;
+      padding: 6px 6px;
+      border-radius: 50%;
+
+      &:first-child {
+        margin-left: unset;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
