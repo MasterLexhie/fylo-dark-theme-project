@@ -14,8 +14,9 @@ body,
 
 .container {
   max-width: 1440px;
-  min-width: 100%;
+  width: 100%;
   padding: 0 2rem;
+  margin: 0 auto;
 }
 
 .flex {
@@ -57,13 +58,17 @@ nav {
   align-items: center;
   justify-content: space-between;
 
+  @media (min-width: 900px) {
+    padding: 0 6rem;
+  }
+
   &__logo {
     width: 120px;
   }
 
   &__menu {
     @media screen and (min-width: 960px) {
-      flex-basis: 28%;
+      // flex-basis: 28%;
     }
 
     & > ul {
@@ -100,6 +105,8 @@ header {
 .curvy-bg {
   position: absolute;
   bottom: 25rem;
+  left: 0;
+  right: 0;
 
   @media screen and (min-width: 950px) {
     bottom: -6px;
@@ -168,9 +175,13 @@ header {
     line-height: 1.6;
     letter-spacing: 1.4px;
 
+    @media screen and (min-width: 760px) {
+      max-width: 70%;
+    }
+
     @media screen and (min-width: 950px) {
       font-size: 2rem;
-      padding: 0 15rem;
+      // padding: 0 15rem;
     }
   }
 
@@ -180,9 +191,14 @@ header {
     word-spacing: 1px;
     padding: 1.3rem 1rem;
 
+    @media screen and (min-width: 760px) {
+      max-width: 65%;
+    }
+
     @media screen and (min-width: 950px) {
       font-size: 1.4em;
-      padding: 1.3rem 24rem;
+      // padding: 1.3rem 24rem;
+      padding: 1.3rem 0rem;
     }
   }
 
@@ -197,12 +213,13 @@ main {
   background: $PrimaryDarkBlueMain;
 
   section {
-    &:nth-child(3) {
-      padding-bottom: 17rem;
-    }
+    // &:nth-child(3) {
+    //   // padding-bottom: 0rem;
+    // }
 
     &:last-child {
       position: relative;
+      bottom: -160px;
     }
   }
 }
@@ -234,10 +251,16 @@ main {
 
     &--content {
       text-align: center;
-      // padding: 0rem 6rem;
+
+      @media screen and (min-width: 760px) {
+        max-width: 300px;
+        margin: 0 auto;
+      }
 
       @media screen and (min-width: 1120px) {
         padding: 0rem 12rem;
+        max-width: unset;
+        margin: unset;
       }
 
       h3 {
@@ -266,11 +289,6 @@ main {
     align-items: center;
   }
 
-  // @media screen and (min-width: 1200px) {
-  //   left: 11%;
-  //   top: 162px;
-  // }
-
   &__image {
     max-width: 350px;
     @media screen and (min-width: 375px) {
@@ -286,16 +304,16 @@ main {
     h3 {
       font-size: 1.2em;
       letter-spacing: 1px;
-      padding: 0 0 1rem 3px;
+      padding: 0 0 1rem 0;
 
       @media screen and (min-width: 950px) {
         font-size: 3em;
-        padding: 0 9rem 1rem 0px;
+        padding: 0 12rem 1rem 0px;
       }
     }
 
     & > p {
-      line-height: 1.7;
+      line-height: 1.9;
       font-size: 0.9em;
       letter-spacing: 0.5px;
 
@@ -304,7 +322,7 @@ main {
       }
 
       &:nth-child(2) {
-        padding: 0 3px 1rem 0;
+        padding: 0 40px 1rem 0;
       }
 
       &:nth-child(3) {
@@ -318,7 +336,7 @@ main {
       padding-bottom: 3px;
 
       @media screen and (min-width: 950px) {
-        width: 12.7rem;
+        width: 13rem;
       }
 
       a {
@@ -428,8 +446,8 @@ main {
 
 .early-access {
   padding: 1rem 2rem;
-  position: absolute;
-  top: -197px;
+  // position: absolute;
+  // top: -197px;
 
   &__card {
     border-radius: 9px;
@@ -522,13 +540,20 @@ footer {
   > * {
     color: $White;
   }
+
+  & > div:first-child {
+    @media (min-width: 900px) {
+      padding: 0 6rem;
+    }
+  }
 }
 
 .base-footer {
   grid-gap: 2rem 1rem;
-  padding-bottom: 2rem;
+  padding: 0 2rem 2rem;
 
   @media screen and (min-width: 760px) {
+    padding: 0 6rem 2rem;
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
   }
 
